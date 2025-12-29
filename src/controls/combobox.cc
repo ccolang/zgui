@@ -5,7 +5,7 @@ using namespace zgui::globals;
 
 //@zgui_packer:resume
 // ========================================================================
-void zgui::combobox(const char *id, std::vector<std::string> items, int &value) {
+void zgui::combobox(const char *id, const std::vector<std::string>& items, int &value) {
     std::vector<std::string> id_split = utils::hash::split_str(id, '#');
 
     const int control_width = 70;
@@ -65,7 +65,7 @@ void zgui::combobox(const char *id, std::vector<std::string> items, int &value) 
 }
 
 // ========================================================================
-void zgui::multi_combobox(const char *id, std::vector<multi_select_item> items) {
+void zgui::multi_combobox(const char *id, const std::vector<multi_select_item>& items) {
     std::vector<std::string> id_split = utils::hash::split_str(id, '#');
 
     const int control_width = 100;

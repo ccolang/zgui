@@ -5,7 +5,7 @@ using namespace zgui::globals;
 
 //@zgui_packer:resume
 // ========================================================================
-void zgui::listbox(const char *id, std::vector<multi_select_item> items) {
+void zgui::listbox(const char *id, const std::vector<multi_select_item>& items) {
     std::vector<std::string> id_split = utils::hash::split_str(id, '#');
 
     const int control_width = 100;

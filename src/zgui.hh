@@ -373,11 +373,11 @@ namespace zgui {
 
     ZGUI_API void slider_float(const char *id, float min, float max, float &value);
 
-    ZGUI_API void combobox(const char *, std::vector<std::string> items, int &value);
+    ZGUI_API void combobox(const char *, const std::vector<std::string>& items, int &value);
 
-    ZGUI_API void multi_combobox(const char *id, std::vector<multi_select_item> items);
+    ZGUI_API void multi_combobox(const char *id, const std::vector<multi_select_item>& items);
 
-    ZGUI_API void listbox(const char *id, std::vector<multi_select_item> items);
+    ZGUI_API void listbox(const char *id, const std::vector<multi_select_item>& items);
 
     ZGUI_API bool clickable_text(const char *id);
 
