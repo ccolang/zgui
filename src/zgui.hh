@@ -172,6 +172,7 @@ namespace zgui {
     enum zgui_groupbox_flags {
       zgui_groupbox_flags_none = 0,
       zgui_groupbox_flags_legacy_design = 1 << 0,
+      zgui_groupbox_flags_title_centered = 1 << 1
     };
 
     enum class zgui_render_type {
