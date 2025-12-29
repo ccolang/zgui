@@ -182,6 +182,11 @@ namespace zgui {
       zgui_text
     };
 
+    enum zgui_condition {
+      zgui_condition_once = 0,
+      zgui_condition_always = 1
+    };
+
     struct zgui_control_render_t {
       vec2 draw_position;
       zgui_render_type render_type;
@@ -347,6 +352,8 @@ namespace zgui {
     ZGUI_API bool begin_window(std::string_view title, vec2 default_size, unsigned long font, int flags = 0);
 
     ZGUI_API void end_window();
+
+    ZGUI_API void set_window_pos(zgui::vec2, zgui_condition condition = zgui_condition::zgui_condition_always);
 
     ZGUI_API void begin_groupbox(std::string_view title, vec2 size, int flags = 0);
 

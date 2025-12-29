@@ -105,3 +105,21 @@ void zgui::end_window() {
         window_ctx.cursor_pos.pop();
 }
 // ========================================================================
+
+// ========================================================================
+void zgui::set_window_pos(zgui::vec2 pos, zgui_condition condition) {
+  if (!window_ctx.opened)
+    return;
+
+  switch (condition) {
+  case zgui_condition_once:
+    if (window_ctx.position.x == 0 && window_ctx.position.y == 0) { // Very primitive, should probably add a field to the window struct to check
+      window_ctx.position = pos;
+    }
+    break;
+  case zgui_condition_always:
+    window_ctx.position = pos;
+    break;
+  }
+}
+// ========================================================================
