@@ -7,7 +7,7 @@ using namespace zgui::globals;
 // ========================================================================
 bool zgui::begin_window(std::string_view title, const vec2 default_size, const unsigned long font, const int flags) {
     if (!input_loop_started)
-        throw std::exception("Input loop didnt start or didnt start properly.");;
+        throw std::exception("Input loop didnt start properly.");;
 
     if (!(flags & zgui_window_flags_always_open)) {
         if (utils::input::key_pressed(global_config.menu_toggle_key))
