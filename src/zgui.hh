@@ -359,7 +359,7 @@ namespace zgui {
 
     ZGUI_API void end_groupbox();
 
-    ZGUI_API void checkbox(const char *id, bool &value);
+    ZGUI_API bool checkbox(const char *id, bool &value);
 
     ZGUI_API void toggle_button(const char *id, vec2 size, bool &value);
 

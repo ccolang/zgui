@@ -5,8 +5,10 @@ using namespace zgui::globals;
 
 //@zgui_packer:resume
 // ========================================================================
-void zgui::checkbox(const char *id, bool &value) {
+bool zgui::checkbox(const char *id, bool &value) {
     std::vector<std::string> id_split = utils::hash::split_str(id, '#');
+
+    bool clicked = false;
 
     const int control_height = 8;
     const int control_width = 8;
@@ -27,6 +29,7 @@ void zgui::checkbox(const char *id, bool &value) {
     else if (active && !utils::input::key_down(VK_LBUTTON)) {
         window_ctx.blocking = 0;
         value = !value;
+        clicked = true;
     }
 
     window_ctx.render.emplace_back(zgui_control_render_t{{draw_pos.x + 14, draw_pos.y - 2}, zgui_render_type::zgui_text, value ? global_colors.color_text : global_colors.color_text_dimmer, id_split[0], vec2{0, 0}, font});
@@ -37,5 +40,6 @@ void zgui::checkbox(const char *id, bool &value) {
     utils::misc::push_cursor_pos(vec2{cursor_pos.x, cursor_pos.y + global_config.item_spacing});
 
     utils::misc::push_font(font);
+    return clicked;
 }
 // ========================================================================
