@@ -12,6 +12,7 @@ add_library(zgui STATIC
   src/controls/text.cc
   src/controls/text_input.cc
   src/controls/toggle_button.cc
+  src/controls/colorpicker.cc
   src/controls/window.cc)
 
 set_target_properties(zgui PROPERTIES

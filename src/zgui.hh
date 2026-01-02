@@ -390,4 +390,6 @@ namespace zgui {
     ZGUI_API void same_line(float x_axis = -1);
 
     ZGUI_API void backup_line();
+
+    ZGUI_API void colorpicker(const char* id, color& value);
 }
